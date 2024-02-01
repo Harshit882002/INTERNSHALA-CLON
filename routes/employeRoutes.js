@@ -11,6 +11,7 @@ const { homepage,
       employeorganizationlogo,
       createinternship,
       readinternship,
+      readallinternship,
       readsingleinternship,
       createjob,
       readjob,
@@ -61,6 +62,8 @@ router.post("/internship/create", isAuthenticated, createinternship);
 // POST ka /employe/internship/read
 router.post("/internship/read", isAuthenticated, readinternship);
 
+// Get ka /employe/internship/allread
+router.get("/internship/read/all", readallinternship)
 
 // POST ka /employe/internship/read/:id
 router.post("/internship/read/:id", isAuthenticated, readsingleinternship);

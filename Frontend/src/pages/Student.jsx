@@ -7,7 +7,7 @@ const Student = () => {
     const fetchData = async () => {
         const response = await axios.get("/api/user/student")
         setD(response.data)
-       console.log(response.data)
+        console.log(response.data)
     }
 
     useEffect(() => {
@@ -15,12 +15,13 @@ const Student = () => {
     }, [])
     // const  data  = axios.get("/user/student")
     // console.log(data)
-  return (
-    <div>
-      <div>{d.firstname}</div>
-      <div>{d.email}</div>
-    </div>
-  )
+    return (
+        <div>
+            <div>{d.firstname}</div>
+            <div>{d.email}</div>
+            <div>dkndfklb</div>
+        </div>
+    )
 }
 
-export default Student
+export default Student

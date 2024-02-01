@@ -141,6 +141,14 @@ exports.readinternship = catchAsyncErrors(async (req, res, next) => {
         res.status(200).json({ success: true, internships});
 });
 
+exports.readallinternship = catchAsyncErrors(async function (req, res, next) {
+        const  internships  = await Internship.find().exec();
+        res.status(200).json({
+            success: true,
+            internships
+        })
+    });
+
 exports.readsingleinternship = catchAsyncErrors(async (req, res, next) => {
         const internship = await await Internship.findById(req.params.id).exec();
         res.status(200).json({ success: true, internship});
